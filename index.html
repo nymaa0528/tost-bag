@@ -354,8 +354,7 @@
   .legend-cite a{color:var(--ink-2);text-decoration:underline;text-underline-offset:2px;}
 
   /* ---------- news ---------- */
-  .news-box{margin-top:56px;background:var(--bg-elev);border:1px solid var(--line);border-radius:10px;
-    padding:36px clamp(20px,5vw,52px) 32px;overflow:hidden;}
+  .news-box{margin-top:56px;}
   .news-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:12px;}
   .news-badge{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
     color:var(--accent-ink);background:var(--accent);padding:4px 10px;border-radius:4px;}
@@ -365,7 +364,7 @@
   .news-stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;}
   .news-stats .factchip{min-width:0;flex:1 1 140px;}
   .news-stats .factchip b span{font-size:.7em;letter-spacing:0;text-transform:none;color:var(--ink-2);}
-  .news-marquee{position:relative;overflow:hidden;margin:0 calc(-1 * clamp(20px,5vw,52px));
+  .news-marquee{position:relative;overflow:hidden;
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
             mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
   .news-track{display:flex;width:max-content;animation:news-scroll 55s linear infinite;}
