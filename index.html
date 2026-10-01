@@ -333,7 +333,7 @@
   .heritage-grid .imgframe{aspect-ratio:4/3;}
   .heritage-stats{display:flex;gap:34px;margin:30px 0;flex-wrap:wrap;}
 
-  .legend-box{margin-top:56px;background:var(--surface2);border-radius:10px;
+  .legend-box{margin-top:0;background:var(--surface2);border-radius:10px;
     padding:44px clamp(24px,5vw,60px) 36px;position:relative;overflow:hidden;}
   .legend-box .quotemark{position:absolute;top:-18px;left:24px;font-family:var(--display);
     font-size:7rem;color:var(--accent);opacity:.16;line-height:1;pointer-events:none;}
@@ -354,7 +354,7 @@
   .legend-cite a{color:var(--ink-2);text-decoration:underline;text-underline-offset:2px;}
 
   /* ---------- news ---------- */
-  .news-box{margin-top:56px;}
+  .news-box{margin-top:0;}
   .news-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:12px;}
   .news-badge{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
     color:var(--accent-ink);background:var(--accent);padding:4px 10px;border-radius:4px;}
@@ -414,6 +414,7 @@
   <div class="dot-wrap" data-target="#flora"><span class="dot-label mn">V · Ургамал</span><span class="dot-label en">V · Flora</span><span class="dot"></span></div>
   <div class="dot-wrap" data-target="#fauna"><span class="dot-label mn">VI · Амьтад</span><span class="dot-label en">VI · Fauna</span><span class="dot"></span></div>
   <div class="dot-wrap" data-target="#heritage"><span class="dot-label mn">VII · Өв</span><span class="dot-label en">VII · Heritage</span><span class="dot"></span></div>
+  <div class="dot-wrap" data-target="#news"><span class="dot-label mn">VIII · Мэдээ</span><span class="dot-label en">VIII · News</span><span class="dot"></span></div>
 </nav>
 
 <!-- ================= HERO ================= -->
@@ -750,6 +751,13 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ================= VIII. NEWS ================= -->
+<section id="news" class="alt">
+  <div class="wrap">
+    <div class="kicker reveal"><span class="num">VIII</span><span class="lbl mn">Мэдээ</span><span class="lbl en">News</span></div>
     <div class="news-box reveal">
       <div class="news-head">
         <span class="news-badge"><span class="mn">Онцлох мэдээ</span><span class="en">News</span></span>
@@ -779,6 +787,12 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ================= VII. HERITAGE · LEGEND ================= -->
+<section id="legend">
+  <div class="wrap">
     <div class="legend-box reveal">
       <div class="quotemark">"</div>
       <div class="legend-eyebrow"><span class="mn">Ардын аман зохиол</span><span class="en">Folk legend</span></div>
@@ -866,7 +880,7 @@
       if (target) target.scrollIntoView({behavior:'smooth'});
     });
   });
-  var secIds = ['#hero','#history','#numbers','#geography','#climate','#flora','#fauna','#heritage'];
+  var secIds = ['#hero','#history','#numbers','#geography','#climate','#flora','#fauna','#heritage','#news'];
   var secEls = secIds.map(function(id){return document.querySelector(id);}).filter(Boolean);
   var railIO = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
