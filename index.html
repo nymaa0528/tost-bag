@@ -1067,7 +1067,6 @@
   <div class="docm-bar">
     <span class="docm-title"></span>
     <a class="docm-open" target="_blank" rel="noopener"><span class="mn">Шинэ цонхонд</span><span class="en">New tab</span></a>
-    <a class="docm-dl" download><span class="mn">Татах</span><span class="en">Download</span></a>
     <button class="docm-close" aria-label="Хаах">&times;</button>
   </div>
   <iframe title="PDF"></iframe>
@@ -1083,8 +1082,8 @@
       e.preventDefault();
       var url=a.getAttribute('href');
       m.querySelector('.docm-title').textContent=a.getAttribute('data-doc-title')||'';
-      m.querySelector('.docm-open').href=url; m.querySelector('.docm-dl').href=url;
-      fr.src=url; m.classList.add('open'); document.body.style.overflow='hidden';
+      m.querySelector('.docm-open').href=url;
+      fr.src=url+'#toolbar=0'; m.classList.add('open'); document.body.style.overflow='hidden';
     });
   });
   m.querySelector('.docm-close').onclick=close;
